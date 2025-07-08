@@ -12,6 +12,7 @@
             --primary: #006838;
             --secondary: #b70303;
             --accent: #1a56db;
+            --whatsapp: #25D366;
         }
         
         body {
@@ -145,6 +146,60 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
+        
+        .linkedin-btn {
+            background: #0A66C2;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn {
+            background: var(--whatsapp);
+            transition: all 0.3s ease;
+        }
+        
+        .linkedin-btn:hover, .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .impact-item {
+            background-color: #f8fafc;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .impact-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .impact-text {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+        
+        .pursuit-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .pursuit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -158,6 +213,7 @@
                 <a href="#about" class="nav-link text-slate-600 hover:text-slate-900 transition">About</a>
                 <a href="#portfolio" class="nav-link text-slate-600 hover:text-slate-900 transition">Portfolio</a>
                 <a href="#skills" class="nav-link text-slate-600 hover:text-slate-900 transition">Skills</a>
+                <a href="#pursuits" class="nav-link text-slate-600 hover:text-slate-900 transition">Pursuits</a>
                 <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900 transition">Contact</a>
             </div>
             <div class="md:hidden">
@@ -173,6 +229,7 @@
             <a href="#about" class="block py-2 text-slate-600 hover:text-slate-900">About</a>
             <a href="#portfolio" class="block py-2 text-slate-600 hover:text-slate-900">Portfolio</a>
             <a href="#skills" class="block py-2 text-slate-600 hover:text-slate-900">Skills</a>
+            <a href="#pursuits" class="block py-2 text-slate-600 hover:text-slate-900">Pursuits</a>
             <a href="#contact" class="block py-2 text-slate-600 hover:text-slate-900">Contact</a>
         </div>
     </header>
@@ -204,35 +261,6 @@
             <div class="max-w-4xl mx-auto text-slate-700 leading-relaxed text-center">
                 <p class="mb-6 text-lg">I believe that the biggest challenges, whether in healthcare or technology, are solved by building better systems. My expertise lies in taking a complex operational problem, designing a practical, human-centred solution, and leading the cross-functional teams needed to implement it at scale.</p>
                 <p class="mb-6 text-lg">Over the past five years, I have built and optimised the operational backbone for LifeBank, a high-growth health technology company. This involved everything from designing international programme rollouts to overhauling logistics networks to drive efficiency. I thrive in fast-paced environments where I can create order from chaos, work with stakeholders at all levels, and deliver measurable results.</p>
-                
-                <div class="mt-10 bg-gradient-to-r from-[#006838] to-[#b70303] p-1 rounded-xl inline-block">
-                    <div class="bg-white rounded-xl p-6">
-                        <h3 class="text-xl font-bold text-slate-800 mb-4">My Approach</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div class="text-center p-4">
-                                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Innovative Solutions</h4>
-                                <p class="text-slate-600">Developing creative approaches to complex operational challenges</p>
-                            </div>
-                            <div class="text-center p-4">
-                                <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-users text-green-600 text-2xl"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Team Leadership</h4>
-                                <p class="text-slate-600">Building and guiding cross-functional teams to success</p>
-                            </div>
-                            <div class="text-center p-4">
-                                <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">Measurable Impact</h4>
-                                <p class="text-slate-600">Driving results with data-driven decision making</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -245,7 +273,7 @@
                 <!-- Case Study 1: Last-Mile Delivery -->
                 <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12" style="border-color: #006838;">
                     <a href="https://lifebankcares.com/onebox/" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Last-Mile Medical Delivery Initiative (OneBox)</h3>
+                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Last-Mile Medical Delivery Initiative</h3>
                     </a>
                     <p class="text-slate-600 mb-6 text-lg">Partners: Gates Foundation, BOAT Foundation</p>
                     
@@ -280,7 +308,11 @@
 
                             <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Media</h4>
                             <a href="https://www.linkedin.com/posts/boat-foundation_how-onebox-is-transforming-primary-healthcare-activity-7272636284693532672-wNh5?utm_source=share&utm_medium=member_android&rcm=ACoAAB9PfWMBnaRiD_EWOSkbXTyh6eQWupm0hY4" target="_blank" rel="noopener noreferrer">
-                                <img src="./images/project-cover.png" alt="Last-Mile Delivery Project" class="rounded-lg shadow-md w-full hover:opacity-80 transition-opacity" onerror="this.onerror=null;this.src='https://placehold.co/600x400/006838/ffffff?text=View+Project+Update';">
+                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center">
+                                        <span class="text-gray-500">Project Cover Image</span>
+                                    </div>
+                                </div>
                             </a>
                             <p class="text-xs text-center mt-2 text-slate-500">Click image to view project update on LinkedIn.</p>
                         </div>
@@ -294,7 +326,7 @@
                     </a>
                     <p class="text-slate-600 mb-6 text-lg">Partners: Partners In Health (PIH), MSD for Mothers</p>
                     
-                    <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                         <div>
                             <h4 class="font-semibold text-xl text-slate-700 mb-2">The Challenge</h4>
                             <p class="text-slate-600 mb-6">To improve maternal health outcomes in Sierra Leone by providing reliable, local access to safe blood in a region with limited advanced health infrastructure.</p>
@@ -303,19 +335,33 @@
                             <p class="text-slate-600">I spearheaded this project from the ground up. I managed the entire lifecycle, from the initial needs assessment and co-designing the workflow with local officials, to managing international partner relationships, procuring specialist equipment, and overseeing the training of the local technical team.</p>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Key Outcomes</h4>
-                            <ul class="list-disc list-inside space-y-2 text-slate-600 mb-6">
-                                <li>Established the <span class="font-bold">first facility of its kind</span> in the nation.</li>
-                                <li>Provides safe blood access for over <span class="font-bold">5,000 women</span> annually.</li>
-                                <li>Created a new, sustainable standard for healthcare in the country.</li>
-                            </ul>
+                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Scale & Impact</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-slate-50 p-4 rounded-lg text-center">
+                                    <p class="text-3xl font-bold" style="color: #b70303;">211+</p>
+                                    <p class="text-sm text-slate-500">Units of Blood Collected</p>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center">
+                                    <p class="text-3xl font-bold" style="color: #b70303;">246</p>
+                                    <p class="text-sm text-slate-500">Donors Pre-screened</p>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center">
+                                    <p class="text-3xl font-bold" style="color: #b70303;">1</p>
+                                    <p class="text-sm text-slate-500">First-of-its-Kind Facility</p>
+                                </div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center">
+                                    <p class="text-3xl font-bold" style="color: #b70303;">100%</p>
+                                    <p class="text-sm text-slate-500">Infrastructure Deployment</p>
+                                </div>
+                            </div>
                             
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Video</h4>
+                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Media</h4>
                             <div class="video-container">
-                                <video id="smartcentre-video" class="w-full rounded-lg shadow-md" controls poster="./images/smartcentre-video-cover.png">
-                                    <source src="./videos/smartcentre-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center">
+                                        <span class="text-gray-500">Video Cover Image</span>
+                                    </div>
+                                </div>
                                 <div class="play-button" id="play-button-overlay">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -474,42 +520,118 @@
             </div>
         </section>
 
+        <!-- My Approach Section -->
+        <section class="py-20 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl px-6">
+            <h2 class="text-3xl font-bold text-center section-title">My Approach</h2>
+            <div class="max-w-4xl mx-auto mt-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Innovative Solutions</h3>
+                        <p class="text-slate-600">Developing creative approaches to complex operational challenges with human-centered design principles.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Collaborative Leadership</h3>
+                        <p class="text-slate-600">Building and guiding cross-functional teams to success through shared vision and empowerment.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Measurable Impact</h3>
+                        <p class="text-slate-600">Driving tangible results with data-driven decision making and continuous improvement methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Pursuits Section -->
+        <section id="pursuits" class="py-20">
+            <h2 class="text-3xl font-bold text-center section-title">Personal Pursuits</h2>
+            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Beyond my professional work, I am passionate about personal growth and community building. These pursuits reflect my commitment to continuous learning and empowering others.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-running text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Marathon Runner</h3>
+                    </div>
+                    <p class="text-slate-600">Completed three marathons in Lagos, experiences that have taught me discipline, resilience, and the power of perseverance in achieving long-term goals.</p>
+                </div>
+                
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Training Development</h3>
+                    </div>
+                    <p class="text-slate-600">Created impactful training materials and courses designed to empower others, focusing on practical skills development and leadership principles.</p>
+                </div>
+                
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-users text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Leadership Training</h3>
+                    </div>
+                    <p class="text-slate-600">Developed "Leading Without a Title," a leadership module that empowers individuals at all levels to take initiative and drive positive change.</p>
+                </div>
+                
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-handshake text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Sales Techniques</h3>
+                    </div>
+                    <p class="text-slate-600">Created "Pull, Don't Push: Inbound Sales Techniques for Stronger Customer Engagement," focusing on relationship-based sales approaches.</p>
+                </div>
+                
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-headset text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Customer Service</h3>
+                    </div>
+                    <p class="text-slate-600">Designed "Grow Repeat Business with Excellent After-Sales Service," emphasizing the importance of post-purchase relationships.</p>
+                </div>
+                
+                <div class="pursuit-card">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-teal-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-hands-helping text-teal-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800">Community Building</h3>
+                    </div>
+                    <p class="text-slate-600">Active in creating platforms for knowledge sharing and professional development within the health tech and operations communities.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl px-6">
+        <section id="contact" class="py-20 text-center">
             <h2 class="text-3xl font-bold text-slate-800">Let's Connect</h2>
             <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">I am passionate about applying my systems-building expertise to new challenges and industries. If you are working on complex operational problems, I would be glad to connect.</p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="mailto:usiaphreteheri@gmail.com" class="contact-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
                     <i class="fas fa-envelope mr-2"></i> Email Me
                 </a>
-                <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="bg-white text-slate-800 font-semibold py-3 px-8 rounded-lg hover:bg-slate-50 transition shadow-md border border-slate-200 inline-flex items-center justify-center">
+                <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="linkedin-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
                     <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
                 </a>
-            </div>
-            
-            <div class="mt-16 max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
-                <h3 class="text-xl font-bold text-slate-800 mb-6">Get in Touch</h3>
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="md:col-span-1">
-                        <label for="name" class="block text-left text-slate-700 mb-2">Full Name</label>
-                        <input type="text" id="name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="md:col-span-1">
-                        <label for="email" class="block text-left text-slate-700 mb-2">Email Address</label>
-                        <input type="email" id="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label for="subject" class="block text-left text-slate-700 mb-2">Subject</label>
-                        <input type="text" id="subject" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label for="message" class="block text-left text-slate-700 mb-2">Message</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                    </div>
-                    <div class="md:col-span-2">
-                        <button type="submit" class="contact-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg mt-4">Send Message</button>
-                    </div>
-                </form>
+                <a href="https://wa.me/2348081074629" target="_blank" class="whatsapp-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                </a>
             </div>
         </section>
     </main>
@@ -525,8 +647,8 @@
                 <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="text-slate-400 hover:text-white transition">
                     <i class="fab fa-linkedin-in fa-lg"></i>
                 </a>
-                <a href="#" class="text-slate-400 hover:text-white transition">
-                    <i class="fab fa-twitter fa-lg"></i>
+                <a href="https://wa.me/2348081074629" target="_blank" class="text-slate-400 hover:text-white transition">
+                    <i class="fab fa-whatsapp fa-lg"></i>
                 </a>
             </div>
         </div>
@@ -539,30 +661,22 @@
             menu.classList.toggle('hidden');
         });
         
-        // Video play button functionality
-        document.getElementById('play-button-overlay').addEventListener('click', function() {
-            const video = document.getElementById('smartcentre-video');
-            video.play();
-            this.style.display = 'none';
-            document.getElementById('video-overlay').style.display = 'none';
-        });
-        
-        // Hide overlay when video starts playing
-        document.getElementById('smartcentre-video').addEventListener('play', function() {
-            document.getElementById('play-button-overlay').style.display = 'none';
-            document.getElementById('video-overlay').style.display = 'none';
-        });
-        
-        // Show overlay when video ends
-        document.getElementById('smartcentre-video').addEventListener('ended', function() {
-            document.getElementById('play-button-overlay').style.display = 'flex';
-            document.getElementById('video-overlay').style.display = 'block';
-        });
-        
-        // Show overlay when video is paused
-        document.getElementById('smartcentre-video').addEventListener('pause', function() {
-            document.getElementById('play-button-overlay').style.display = 'flex';
-            document.getElementById('video-overlay').style.display = 'block';
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
         });
     </script>
 </body>
