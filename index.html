@@ -66,6 +66,8 @@
         
         .skill-badge {
             transition: all 0.3s ease;
+            padding: 1.5rem 1rem;
+            font-size: 1.05rem;
         }
         
         .skill-badge:hover {
@@ -190,13 +192,27 @@
         .pursuit-card {
             background-color: white;
             border-radius: 0.75rem;
-            padding: 1.5rem;
+            padding: 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             transition: all 0.3s ease;
             height: 100%;
         }
         
         .pursuit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .approach-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .approach-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -273,7 +289,7 @@
                 <!-- Case Study 1: Last-Mile Delivery -->
                 <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12" style="border-color: #006838;">
                     <a href="https://lifebankcares.com/onebox/" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Last-Mile Medical Delivery Initiative</h3>
+                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Last-Mile Medical Delivery Initiative: Nigeria</h3>
                     </a>
                     <p class="text-slate-600 mb-6 text-lg">Partners: Gates Foundation, BOAT Foundation</p>
                     
@@ -302,19 +318,19 @@
                                 </div>
                                 <div class="bg-slate-50 p-4 rounded-lg text-center">
                                     <p class="text-3xl font-bold" style="color: #006838;">85%</p>
-                                    <p class="text-sm text-slate-500">Increase in Supply Chain Visibility</p>
+                                    <p class="text-sm text-slate-500">Supply Chain Visibility Increase</p>
                                 </div>
                             </div>
 
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Media</h4>
-                            <a href="https://www.linkedin.com/posts/boat-foundation_how-onebox-is-transforming-primary-healthcare-activity-7272636284693532672-wNh5?utm_source=share&utm_medium=member_android&rcm=ACoAAB9PfWMBnaRiD_EWOSkbXTyh6eQWupm0hY4" target="_blank" rel="noopener noreferrer">
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center">
-                                        <span class="text-gray-500">Project Cover Image</span>
-                                    </div>
+                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Video</h4>
+                            <div class="video-container">
+                                <img src="./images/Last-Mile Medical Delivery Initiative Nigeria.jpg" alt="Last-Mile Delivery Project" class="rounded-lg shadow-md w-full">
+                                <div class="play-button" data-video="https://youtu.be/1nI_ir6ubAQ">
+                                    <i class="fas fa-play"></i>
                                 </div>
-                            </a>
-                            <p class="text-xs text-center mt-2 text-slate-500">Click image to view project update on LinkedIn.</p>
+                                <div class="video-overlay"></div>
+                            </div>
+                            <p class="text-xs text-center mt-2 text-slate-500">Click the play button to watch the project video</p>
                         </div>
                     </div>
                 </div>
@@ -322,7 +338,7 @@
                 <!-- Case Study 2: Blood Screening Centre -->
                 <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12" style="border-color: #b70303;">
                     <a href="https://smartbank.lifebankcares.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <h3 class="font-bold text-3xl mb-3 text-slate-800">SmartCentre Sierra Leone</h3>
+                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Blood Safety Initiative: Sierra Leone</h3>
                     </a>
                     <p class="text-slate-600 mb-6 text-lg">Partners: Partners In Health (PIH), MSD for Mothers</p>
                     
@@ -355,17 +371,13 @@
                                 </div>
                             </div>
                             
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Media</h4>
+                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Video</h4>
                             <div class="video-container">
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-48 flex items-center justify-center">
-                                        <span class="text-gray-500">Video Cover Image</span>
-                                    </div>
-                                </div>
-                                <div class="play-button" id="play-button-overlay">
+                                <img src="./images/Blood Safety Initiative Sierra Leone.jpg" alt="Blood Safety Initiative" class="rounded-lg shadow-md w-full">
+                                <div class="play-button" data-video="https://youtu.be/ZIcOuI9t1QU">
                                     <i class="fas fa-play"></i>
                                 </div>
-                                <div class="video-overlay" id="video-overlay"></div>
+                                <div class="video-overlay"></div>
                             </div>
                             <p class="text-xs text-center mt-2 text-slate-500">Click the play button to watch the project video</p>
                         </div>
@@ -525,26 +537,26 @@
             <h2 class="text-3xl font-bold text-center section-title">My Approach</h2>
             <div class="max-w-4xl mx-auto mt-12">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                    <div class="approach-card text-center">
+                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-blue-600 text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-slate-800 mb-3">Innovative Solutions</h3>
-                        <p class="text-slate-600">Developing creative approaches to complex operational challenges with human-centered design principles.</p>
+                        <h3 class="font-bold text-lg text-slate-800 mb-3">Innovative Solutions</h3>
+                        <p class="text-slate-600 text-sm">Developing creative approaches to complex operational challenges with human-centered design principles.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-users text-green-600 text-2xl"></i>
+                    <div class="approach-card text-center">
+                        <div class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-green-600 text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-slate-800 mb-3">Collaborative Leadership</h3>
-                        <p class="text-slate-600">Building and guiding cross-functional teams to success through shared vision and empowerment.</p>
+                        <h3 class="font-bold text-lg text-slate-800 mb-3">Collaborative Leadership</h3>
+                        <p class="text-slate-600 text-sm">Building and guiding cross-functional teams to success through shared vision and empowerment.</p>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
-                        <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                    <div class="approach-card text-center">
+                        <div class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-purple-600 text-xl"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-slate-800 mb-3">Measurable Impact</h3>
-                        <p class="text-slate-600">Driving tangible results with data-driven decision making and continuous improvement methodologies.</p>
+                        <h3 class="font-bold text-lg text-slate-800 mb-3">Measurable Impact</h3>
+                        <p class="text-slate-600 text-sm">Driving tangible results with data-driven decision making and continuous improvement methodologies.</p>
                     </div>
                 </div>
             </div>
@@ -555,65 +567,35 @@
             <h2 class="text-3xl font-bold text-center section-title">Personal Pursuits</h2>
             <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Beyond my professional work, I am passionate about personal growth and community building. These pursuits reflect my commitment to continuous learning and empowering others.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-red-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-running text-red-600 text-xl"></i>
+                    <div class="flex items-center mb-3">
+                        <div class="bg-red-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-running text-red-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800">Marathon Runner</h3>
+                        <h3 class="text-lg font-bold text-slate-800">Marathon Runner</h3>
                     </div>
-                    <p class="text-slate-600">Completed three marathons in Lagos, experiences that have taught me discipline, resilience, and the power of perseverance in achieving long-term goals.</p>
+                    <p class="text-slate-600 text-sm">Avid ultra runner. These long distance experiences have taught me discipline, resilience, and the power of perseverance in achieving long-term goals.</p>
                 </div>
                 
                 <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-blue-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-chalkboard-teacher text-blue-600 text-xl"></i>
+                    <div class="flex items-center mb-3">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-chalkboard-teacher text-blue-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800">Training Development</h3>
+                        <h3 class="text-lg font-bold text-slate-800">Leadership Training</h3>
                     </div>
-                    <p class="text-slate-600">Created impactful training materials and courses designed to empower others, focusing on practical skills development and leadership principles.</p>
+                    <p class="text-slate-600 text-sm">Developed "Leading Without a Title," a leadership training module that empowers entry-level professionals to take initiative and build influence for their career growth.</p>
                 </div>
                 
                 <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-green-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-users text-green-600 text-xl"></i>
+                    <div class="flex items-center mb-3">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i class="fas fa-handshake text-green-600"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-800">Leadership Training</h3>
+                        <h3 class="text-lg font-bold text-slate-800">B2B Sales Techniques</h3>
                     </div>
-                    <p class="text-slate-600">Developed "Leading Without a Title," a leadership module that empowers individuals at all levels to take initiative and drive positive change.</p>
-                </div>
-                
-                <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-purple-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-handshake text-purple-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800">Sales Techniques</h3>
-                    </div>
-                    <p class="text-slate-600">Created "Pull, Don't Push: Inbound Sales Techniques for Stronger Customer Engagement," focusing on relationship-based sales approaches.</p>
-                </div>
-                
-                <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-headset text-yellow-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800">Customer Service</h3>
-                    </div>
-                    <p class="text-slate-600">Designed "Grow Repeat Business with Excellent After-Sales Service," emphasizing the importance of post-purchase relationships.</p>
-                </div>
-                
-                <div class="pursuit-card">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-teal-100 p-3 rounded-full mr-4">
-                            <i class="fas fa-hands-helping text-teal-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-800">Community Building</h3>
-                    </div>
-                    <p class="text-slate-600">Active in creating platforms for knowledge sharing and professional development within the health tech and operations communities.</p>
+                    <p class="text-slate-600 text-sm">Developed "Pull, Don't Push: Inbound Sales Techniques for Stronger Customer Engagement," training modules focusing on relationship-based sales approaches.</p>
                 </div>
             </div>
         </section>
@@ -654,6 +636,18 @@
         </div>
     </footer>
 
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="w-full max-w-4xl p-4">
+            <div class="relative">
+                <button id="close-modal" class="absolute -top-10 right-0 text-white text-2xl">&times;</button>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe id="video-iframe" class="w-full h-full rounded-lg" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -677,6 +671,36 @@
                     document.getElementById('mobile-menu').classList.add('hidden');
                 }
             });
+        });
+        
+        // Video modal functionality
+        const videoModal = document.getElementById('video-modal');
+        const videoIframe = document.getElementById('video-iframe');
+        const closeModal = document.getElementById('close-modal');
+        const playButtons = document.querySelectorAll('.play-button');
+        
+        playButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const videoUrl = this.getAttribute('data-video');
+                const videoId = videoUrl.split('/').pop();
+                videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                videoModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            videoModal.classList.add('hidden');
+            videoIframe.src = '';
+            document.body.style.overflow = 'auto';
+        });
+        
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                videoModal.classList.add('hidden');
+                videoIframe.src = '';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
