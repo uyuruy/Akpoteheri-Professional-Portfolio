@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akpoteheri Tony Usiaphre - Business Builder & GTM Operations Leader</title>
-    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -62,6 +59,7 @@
         .modal-content { transition: transform 0.3s ease; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .notion-embed { height: 80vh; }
     </style>
 </head>
 <body class="antialiased">
@@ -109,9 +107,10 @@
             </div>
             <div class="md:w-1/3 mt-12 md:mt-0 flex justify-center">
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl transform rotate-6"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#005a31] to-[#b70303] rounded-2xl transform rotate-6"></div>
                     <div class="w-64 md:w-80 relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://placehold.co/600x800/e2e8f0/334155?text=Profile+Image" alt="Akpoteheri Tony Usiaphre" class="rounded-2xl w-full h-full object-cover">
+                        <!-- Fixed profile image path -->
+                        <img src="./images/profile-picture.jpg" alt="Akpoteheri Tony Usiaphre" class="rounded-2xl w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x800/e2e8f0/334155?text=Profile+Image';">
                     </div>
                 </div>
             </div>
@@ -185,59 +184,63 @@
             </div>
         </section>
         
-        <!-- INNOVATION LAB SECTION -->
+        <!-- INNOVATION LAB SECTION - Updated -->
         <section id="innovation-lab" class="py-20">
             <h2 class="text-3xl font-bold text-center section-title relative">Innovation Lab: Product Concepts</h2>
-            <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 mt-12 max-w-6xl mx-auto" style="border-left-color: #8b5cf6;">
-                <p class="text-slate-600 mb-8 text-lg max-w-3xl mx-auto text-center">As Director of Innovation, my core responsibility was to lead the development of the next generation of health technology solutions. Below are high-level concepts for some of the confidential products I have led from ideation and business case development through to prototyping and GTM strategy.</p>
+            <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-6 md:p-8 mt-12 max-w-5xl mx-auto" style="border-left-color: #8b5cf6;">
+                <!-- Left-aligned text -->
+                <p class="text-slate-600 mb-6 text-lg max-w-3xl text-left">
+                    As Director of Innovation, my core responsibility was to lead the development of the next generation of health technology solutions. Below are high-level concepts for some of the confidential products I have led from ideation and business case development through to prototyping and GTM strategy.
+                </p>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-red-100 text-red-700 p-3 rounded-full mr-3"><i class="fas fa-tint fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">SmartBank</h4>
+                <!-- Reduced size grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-red-100 text-red-700 p-2 rounded-full mr-2"><i class="fas fa-tint text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">SmartBank</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">A modular blood safety solution combining physical infrastructure, digital records, and a BOTM model for traceability and screening.</p>
+                        <p class="text-sm text-slate-600 mb-2">A modular blood safety solution combining physical infrastructure, digital records, and a BOTM model for traceability and screening.</p>
                         <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Operational</span>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-blue-100 text-blue-700 p-3 rounded-full mr-3"><i class="fas fa-cogs fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">QUIP</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-blue-100 text-blue-700 p-2 rounded-full mr-2"><i class="fas fa-cogs text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">QUIP</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">A cloud platform for medical equipment lifecycle management, connecting facilities with certified engineers and verified vendors.</p>
+                        <p class="text-sm text-slate-600 mb-2">A cloud platform for medical equipment lifecycle management, connecting facilities with certified engineers and verified vendors.</p>
                         <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Pilot</span>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-purple-100 text-purple-700 p-3 rounded-full mr-3"><i class="fas fa-shield-alt fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">Guardian</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-purple-100 text-purple-700 p-2 rounded-full mr-2"><i class="fas fa-shield-alt text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">Guardian</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">A decentralised CPD platform for healthcare professionals, offering training, digital credentials, and skill-based job matching.</p>
+                        <p class="text-sm text-slate-600 mb-2">A decentralised CPD platform for healthcare professionals, offering training, digital credentials, and skill-based job matching.</p>
                         <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-teal-100 text-teal-700 p-3 rounded-full mr-3"><i class="fas fa-network-wired fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">OneSystem</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-teal-100 text-teal-700 p-2 rounded-full mr-2"><i class="fas fa-network-wired text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">OneSystem</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">An integrated supply chain platform connecting logistics, distribution, and funding across public health systems.</p>
+                        <p class="text-sm text-slate-600 mb-2">An integrated supply chain platform connecting logistics, distribution, and funding across public health systems.</p>
                         <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Deployed</span>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-yellow-100 text-yellow-700 p-3 rounded-full mr-3"><i class="fas fa-ambulance fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">First Response</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-yellow-100 text-yellow-700 p-2 rounded-full mr-2"><i class="fas fa-ambulance text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">First Response</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">A digital coordination tool connecting emergency responders and ambulances to reduce dispatch delays and optimise routes.</p>
+                        <p class="text-sm text-slate-600 mb-2">A digital coordination tool connecting emergency responders and ambulances to reduce dispatch delays and optimise routes.</p>
                         <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">In Testing</span>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-lg border">
-                        <div class="flex items-center mb-3">
-                            <div class="bg-pink-100 text-pink-700 p-3 rounded-full mr-3"><i class="fas fa-female fa-lg"></i></div>
-                            <h4 class="font-bold text-lg text-slate-800">Her Cover</h4>
+                    <div class="bg-slate-50 p-4 rounded-lg border">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-pink-100 text-pink-700 p-2 rounded-full mr-2"><i class="fas fa-female text-sm"></i></div>
+                            <h4 class="font-bold text-md text-slate-800">Her Cover</h4>
                         </div>
-                        <p class="text-sm text-slate-600 mb-3">A system to reduce catastrophic health costs for women with chronic conditions via insurance enrollment and subsidised care.</p>
+                        <p class="text-sm text-slate-600 mb-2">A system to reduce catastrophic health costs for women with chronic conditions via insurance enrollment and subsidised care.</p>
                         <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
                     </div>
                 </div>
@@ -370,50 +373,23 @@
     </footer>
 
     <!-- MODALS CONTAINER -->
-    <!-- AI Risk Modal -->
+    <!-- AI Risk Modal - Updated with Notion Embed -->
     <div id="modal-ai-risk" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-overlay p-4">
-        <div class="bg-white rounded-lg shadow-2xl m-4 max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content">
+        <div class="bg-white rounded-lg shadow-2xl m-4 w-full max-w-6xl max-h-[90vh] overflow-y-auto modal-content">
             <div class="p-6 sm:p-8 sticky top-0 bg-white border-b border-gray-200 flex justify-between items-center">
-                <h2 class="text-2xl font-bold text-slate-900">Case Study: AI-Powered Market Risk Analysis</h2>
+                <h2 class="text-2xl font-bold text-slate-900">AI-Powered Market Risk Analysis System</h2>
                 <button class="close-modal text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
             </div>
-            <div class="p-6 sm:p-8">
-                <section class="mb-8">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Overview</h3>
-                    <p class="text-slate-700 leading-relaxed">An autonomous, serverless workflow I designed and built from scratch to automate market risk analysis. The system fetches daily news headlines, uses Google's Gemini AI to produce a structured risk assessment, and distributes the intelligence to a live Airtable dashboard and a proactive Asana task management system.</p>
-                </section>
-                <hr class="my-6">
-                <section class="mb-8">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">The Challenge</h3>
-                    <p class="text-slate-700 leading-relaxed">Traditional market analysis for a new region is manual, time-consuming, and fails to capture real-time shifts in the business environment.</p>
-                </section>
-                <hr class="my-6">
-                <section class="mb-8">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">My Role & System Architecture</h3>
-                    <p class="text-slate-700 leading-relaxed mb-4">As the sole architect, I designed and coded the end-to-end intelligence pipeline using Google Apps Script. The workflow:</p>
-                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
-                        <li><strong>Triggers daily</strong> to fetch news from pre-configured RSS feeds.</li>
-                        <li><strong>Sends headlines to the Gemini AI API</strong> within a carefully engineered prompt to return a risk analysis in a strict JSON format.</li>
-                        <li><strong>Distributes the structured data</strong> via API to an Airtable dashboard and an Asana project for proactive alerts.</li>
-                    </ol>
-                </section>
-                <hr class="my-6">
-                <section class="mb-8">
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Final System View</h3>
-                    <p class="text-slate-700 leading-relaxed mb-4">The live Airtable database below is the central hub for viewing the daily, AI-generated risk analysis.</p>
-                    <div class="bg-slate-100 p-2 rounded-lg shadow-inner border w-full h-96">
-                         <iframe class="airtable-embed w-full h-full" src="https://airtable.com/embed/appSxSqgTD1DDDyg8/shrpuzvTxwykf24hP" frameborder="0" onmousewheel="" ></iframe>
-                    </div>
-                </section>
-                <hr class="my-6">
-                 <section>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Key Challenges & Resolutions</h3>
-                    <p class="text-slate-700 leading-relaxed mb-4">This project involved significant real-world debugging:</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-700">
-                        <li><strong>API Errors (404s & 403s):</strong> Resolved API model rejection and access-denied errors by iteratively testing model versions and re-configuring API token permission scopes.</li>
-                        <li><strong>Data Parsing Failures:</strong> Implemented robust extraction logic using regex to guarantee a clean JSON string for parsing, overcoming AI response formatting inconsistencies.</li>
-                    </ul>
-                </section>
+            <div class="p-0">
+                <!-- Notion Embed -->
+                <div class="notion-embed w-full">
+                    <iframe 
+                        src="https://jumbled-sailfish-519.notion.site/AI-Powered-Market-Risk-Analysis-System-2325fcaeeca78064bb96c1dae2260f91?pvs=143" 
+                        class="w-full h-full" 
+                        frameborder="0"
+                        allowfullscreen
+                    ></iframe>
+                </div>
             </div>
         </div>
     </div>
