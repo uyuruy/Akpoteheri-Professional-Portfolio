@@ -3,236 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akpoteheri Tony Usiaphre - Operations & Innovation Leader</title>
+    <title>Akpoteheri Tony Usiaphre - Business Builder & GTM Operations Leader</title>
+    <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #006838;
-            --secondary: #b70303;
-            --accent: #1a56db;
+            --primary: #005a31; /* Deeper green */
+            --secondary: #b70303; /* Deep red */
+            --accent: #1a56db; /* Professional blue */
+            --linkedin: #0A66C2;
             --whatsapp: #25D366;
         }
-        
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
             color: #1e293b;
             scroll-behavior: smooth;
         }
-        
         .section-title {
             position: relative;
             display: inline-block;
             padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
         }
-        
         .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 100%; height: 3px;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
-        
-        .case-study-card {
-            transition: box-shadow 0.3s ease;
-            border-left-width: 8px;
-            border-radius: 12px;
-        }
-        
-        .case-study-card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
-        .innovation-card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-            border-radius: 10px;
-            height: 100%;
-        }
-        
-        .innovation-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .skill-badge {
-            transition: all 0.3s ease;
-            padding: 1.5rem 1rem;
-            font-size: 1.05rem;
-        }
-        
-        .skill-badge:hover {
-            background-color: #e2e8f0;
-            transform: translateY(-3px);
-        }
-        
-        .video-container {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-        
-        .play-button:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-            background: white;
-        }
-        
-        .play-button i {
-            color: var(--secondary);
-            font-size: 24px;
-            margin-left: 4px;
-        }
-        
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: 5;
-        }
-        
-        .nav-link {
-            position: relative;
-            padding: 0.25rem 0;
-        }
-        
         .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 2px; background: var(--primary);
             transition: width 0.3s ease;
         }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .contact-btn {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        .nav-link:hover::after { width: 100%; }
+        .hero-bg { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); }
+        .contact-btn, .whatsapp-btn { transition: all 0.3s ease; }
+        .contact-btn:hover, .linkedin-btn:hover, .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .linkedin-btn { background: var(--linkedin); transition: all 0.3s ease; }
+        .whatsapp-btn { background: var(--whatsapp); }
+        .case-study-card, .value-card, .skill-category-card, .tech-category-card, .pursuit-card, .innovation-lab-card {
             transition: all 0.3s ease;
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .linkedin-btn {
-            background: #0A66C2;
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-btn {
-            background: var(--whatsapp);
-            transition: all 0.3s ease;
-        }
-        
-        .linkedin-btn:hover, .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-        
-        .impact-item {
-            background-color: #f8fafc;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-        }
-        
-        .impact-number {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--secondary);
-            margin-bottom: 0.25rem;
-        }
-        
-        .impact-text {
-            font-size: 0.875rem;
-            color: #4b5563;
-        }
-        
-        .pursuit-card {
-            background-color: white;
             border-radius: 0.75rem;
-            padding: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            height: 100%;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
-        
-        .pursuit-card:hover {
+        .case-study-card:hover, .value-card:hover, .skill-category-card:hover, .tech-category-card:hover, .pursuit-card:hover, .innovation-lab-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
-        .approach-card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-            height: 100%;
+        .case-study-card {
+             border-left-width: 6px;
         }
-        
-        .approach-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .tech-skill {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s ease;
-        }
-        
-        .tech-skill:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
+        .modal-overlay { transition: opacity 0.3s ease; }
+        .modal-content { transition: transform 0.3s ease; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 0.75rem; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     </style>
 </head>
 <body class="antialiased">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-40">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
                 <a href="#" class="text-2xl font-bold text-slate-800">Akpoteheri Tony Usiaphre</a>
@@ -245,379 +79,280 @@
                 <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900 transition">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-slate-600">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
+                <button id="mobile-menu-button" class="text-slate-600 focus:outline-none">
+                    <i class="fas fa-bars fa-lg"></i>
                 </button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-2 shadow-lg">
-            <a href="#about" class="block py-2 text-slate-600 hover:text-slate-900">About</a>
-            <a href="#portfolio" class="block py-2 text-slate-600 hover:text-slate-900">Portfolio</a>
-            <a href="#skills" class="block py-2 text-slate-600 hover:text-slate-900">Skills</a>
-            <a href="#pursuits" class="block py-2 text-slate-600 hover:text-slate-900">Pursuits</a>
-            <a href="#contact" class="block py-2 text-slate-600 hover:text-slate-900">Contact</a>
+            <a href="#about" class="mobile-nav-link block py-2 text-slate-600 hover:text-slate-900">About</a>
+            <a href="#portfolio" class="mobile-nav-link block py-2 text-slate-600 hover:text-slate-900">Portfolio</a>
+            <a href="#skills" class="mobile-nav-link block py-2 text-slate-600 hover:text-slate-900">Skills</a>
+            <a href="#pursuits" class="mobile-nav-link block py-2 text-slate-600 hover:text-slate-900">Pursuits</a>
+            <a href="#contact" class="mobile-nav-link block py-2 text-slate-600 hover:text-slate-900">Contact</a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12 md:py-20">
+        <!-- HERO SECTION -->
         <section id="hero" class="flex flex-col md:flex-row items-center hero-bg rounded-2xl p-8 md:p-12">
             <div class="md:w-2/3 text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">Senior Operations Leader</h1>
-                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl">Building scalable systems for global growth. I transform complex operational challenges into efficient, human-centred solutions that drive measurable impact.</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">Business Builder and GTM Operations Leader</h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl">Building systems that connect vision to execution. Specialising in ops strategy, product workflows, and GTM scaling for fast-moving teams.</p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#portfolio" class="contact-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg">View My Work</a>
-                    <a href="mailto:usiaphreteheri@gmail.com" class="bg-white text-slate-800 font-semibold py-3 px-8 rounded-lg hover:bg-slate-50 transition shadow-md border border-slate-200">Contact Me</a>
-                    <a href="#contact" class="bg-white text-slate-800 font-semibold py-3 px-8 rounded-lg hover:bg-slate-50 transition shadow-md border border-slate-200">Connect With Me</a>
+                    <a href="#portfolio" class="contact-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">View My Work</a>
+                    <a href="mailto:usiaphreteheri@gmail.com" class="bg-white text-slate-800 font-semibold py-3 px-8 rounded-lg hover:bg-slate-50 transition shadow-md border border-slate-200 inline-flex items-center justify-center">Contact Me</a>
+                    <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="linkedin-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
+                        <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
+                    </a>
                 </div>
             </div>
             <div class="md:w-1/3 mt-12 md:mt-0 flex justify-center">
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[#006838] to-[#b70303] rounded-2xl transform rotate-6"></div>
-                    <div class="aspect-w-3 aspect-h-4 w-64 md:w-80 relative rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="./images/profile-picture.jpg" alt="Akpoteheri Tony Usiaphre" class="rounded-2xl w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x800/e2e8f0/334155?text=Profile+Image';">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl transform rotate-6"></div>
+                    <div class="w-64 md:w-80 relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/600x800/e2e8f0/334155?text=Profile+Image" alt="Akpoteheri Tony Usiaphre" class="rounded-2xl w-full h-full object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ABOUT ME SECTION -->
         <section id="about" class="py-20 mt-10">
-            <h2 class="text-3xl font-bold text-center section-title">About Me</h2>
+            <h2 class="text-3xl font-bold text-center section-title relative">About Me</h2>
             <div class="max-w-4xl mx-auto text-slate-700 leading-relaxed text-center">
-                <p class="mb-6 text-lg">I specialise in translating strategic vision into ground-level execution and unifying cross-functional teams to bring that vision to life. Over the past five years, I built the operational backbone for a high-growth, venture-backed healthtech company operating in sub-Saharan Africa.</p>
-                <p class="mb-6 text-lg">My role spanned designing international, donor-funded program rollouts, overhauling complex logistics networks for greater efficiency, and creating the operational frameworks that brought new innovations to market.</p>
-                <p class="mb-6 text-lg">I do my best work in a culture that values learning as much as outcomes, where teams are connected, autonomous, and use rapid experimentation to deliver measurable results and navigate uncertainty.</p>
+                <p class="mb-6 text-lg">I design and implement scalable systems that translate strategy into measurable results using data-driven recommendations and end-to-end project management. Over the past six years, I built the operational backbone for a high-growth, venture-backed company, leading complex, cross-border programs across Africa. With experience as both an operator and founder, I thrive in globally distributed, high-performance teams.</p>
+                <p class="text-lg">I’m now focused on bringing that systems expertise to global product-led organisations, operationalising strategy, unifying teams, and leveraging automation and AI to streamline decision-making and scale impact.</p>
             </div>
         </section>
-
-        <section id="portfolio" class="py-20">
-            <h2 class="text-3xl font-bold text-center section-title">Portfolio: Key Projects</h2>
-            
-            <div class="space-y-20 mt-12">
-
-                <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12" style="border-color: #006838;">
-                    <a href="https://lifebankcares.com/onebox/" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Last-Mile Medical Delivery Initiative: Nigeria</h3>
-                    </a>
-                    <p class="text-slate-600 mb-6 text-lg">Partners: Gates Foundation, BOAT Foundation</p>
-                    
-                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                        <div>
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">The Challenge</h4>
-                            <p class="text-slate-600 mb-6">To solve the critical issue of medicine stockouts at remote Primary Healthcare Centres, which directly impacted community health and trust in the healthcare system.</p>
-                            
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">My Role & Approach</h4>
-                            <p class="text-slate-600">As the project lead, I personally designed the end-to-end operational framework and led a cross-functional team to execute its implementation. This included building a hybrid logistics model from scratch, integrating new technology, and developing the training curriculum that enabled digital adoption for over 500 healthcare workers.</p>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Scale & Impact</h4>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #006838;">510+</p>
-                                    <p class="text-sm text-slate-500">Healthcare Workers Trained</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #006838;">471+</p>
-                                    <p class="text-sm text-slate-500">Primary Care Centres on Network</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #006838;">25k+</p>
-                                    <p class="text-sm text-slate-500">Essential Medicines Delivered</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #006838;">85%</p>
-                                    <p class="text-sm text-slate-500">Supply Chain Visibility Increase</p>
-                                </div>
-                            </div>
-
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Video</h4>
-                            <div class="max-h-80 overflow-hidden rounded-lg shadow-md">
-                                <div class="video-container">
-                                    <img src="./images/Last-Mile Medical Delivery Initiative Nigeria.jpg" alt="Last-Mile Delivery Project" class="w-full">
-                                    <div class="play-button" data-video="https://youtu.be/1nI_ir6ubAQ">
-                                        <i class="fas fa-play"></i>
-                                    </div>
-                                    <div class="video-overlay"></div>
-                                </div>
-                            </div>
-                            <p class="text-xs text-center mt-2 text-slate-500">Click the play button to watch the project video</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12" style="border-color: #b70303;">
-                    <a href="https://smartbank.lifebankcares.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                        <h3 class="font-bold text-3xl mb-3 text-slate-800">Blood Safety Initiative: Sierra Leone</h3>
-                    </a>
-                    <p class="text-slate-600 mb-6 text-lg">Partners: Partners In Health (PIH), MSD for Mothers</p>
-                    
-                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                        <div>
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">The Challenge</h4>
-                            <p class="text-slate-600 mb-6">To improve maternal health outcomes in Sierra Leone by providing reliable, local access to safe blood in a region with limited advanced health infrastructure.</p>
-                            
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">My Role & Approach</h4>
-                            <p class="text-slate-600">I led this project from the ground up, turning an idea into a fully operational facility. My primary challenge was building a first-of-its-kind facility in a region with limited infrastructure. To solve this, my role covered three core areas:</p>
-                            <ul class="list-disc list-inside text-slate-600 space-y-2 mt-3">
-                                <li><strong>System Design:</strong> I personally designed the entire operational plan, from clinical workflows to international procurement.</li>
-                                <li><strong>Partner Management:</strong> I managed the key partnerships between international funders (MSD for Mothers), local implementers (Partners In Health), and the Ministry of Health (MoHS).</li>
-                                <li><strong>Team Building:</strong> I built the local project team, hiring and training them to run the centre independently for long-term success.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Scale & Impact</h4>
-                            <div class="grid grid-cols-2 gap-4 mb-6">
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #b70303;">5k+</p>
-                                    <p class="text-sm text-slate-500">Women Served Annually</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #b70303;">30%</p>
-                                    <p class="text-sm text-slate-500">Increase in Unsafe Blood Detection</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #b70303;">25</p>
-                                    <p class="text-sm text-slate-500">Health Workers Trained</p>
-                                </div>
-                                <div class="bg-slate-50 p-4 rounded-lg text-center">
-                                    <p class="text-3xl font-bold" style="color: #b70303;">1st</p>
-                                    <p class="text-sm text-slate-500">Screening Centre of its Kind</p>
-                                </div>
-                            </div>
-                            
-                            <h4 class="font-semibold text-xl text-slate-700 mb-2">Project Video</h4>
-                            <div class="max-h-80 overflow-hidden rounded-lg shadow-md">
-                                <div class="video-container">
-                                    <img src="./images/Blood Safety Initiative Sierra Leone.jpg" alt="Blood Safety Initiative" class="w-full">
-                                    <div class="play-button" data-video="https://youtu.be/ZIcOuI9t1QU">
-                                        <i class="fas fa-play"></i>
-                                    </div>
-                                    <div class="video-overlay"></div>
-                                </div>
-                            </div>
-                            <p class="text-xs text-center mt-2 text-slate-500">Click the play button to watch the project video</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 border-slate-300">
-                    <h3 class="font-bold text-3xl mb-3 text-slate-800">Innovation Lab: Building the Future of Health Systems</h3>
-                    <p class="text-slate-600 mb-8 text-lg max-w-3xl">As Director of Innovation, my core responsibility was to lead the development of LifeBank's next generation of health technology solutions. Below are high-level concepts for some of the confidential products and platforms I have led from ideation and business case development through to prototyping and GTM strategy.</p>
-                    
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        
-                        <a href="https://smartbank.lifebankcares.com/" target="_blank" class="innovation-card block bg-slate-50 p-6 rounded-lg border border-transparent hover:border-slate-300 hover:shadow-md">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-red-100 text-red-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-tint fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">1. SmartBank</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">A modular blood safety solution combining physical infrastructure, digital records, and a BOTM model for traceability and screening.</p>
-                            <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Operational</span>
-                        </a>
-
-                        <div class="innovation-card bg-slate-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-blue-100 text-blue-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-cogs fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">2. QUIP</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">A cloud platform for medical equipment lifecycle management, connecting facilities with certified engineers and verified vendors.</p>
-                            <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Pilot</span>
-                        </div>
-
-                        <div class="innovation-card bg-slate-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-purple-100 text-purple-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-shield-alt fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">3. Guardian</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">A decentralised CPD platform for healthcare professionals, offering training, digital credentials, and skill-based job matching.</p>
-                            <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
-                        </div>
-
-                        <div class="innovation-card bg-slate-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-teal-100 text-teal-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-network-wired fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">4. OneSystem</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">An integrated supply chain platform connecting logistics, distribution, and funding across public health systems.</p>
-                            <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Deployed</span>
-                        </div>
-
-                        <div class="innovation-card bg-slate-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-yellow-100 text-yellow-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-ambulance fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">5. First Response</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">A digital coordination tool connecting emergency responders and ambulances to reduce dispatch delays and optimise routes.</p>
-                            <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">In Testing</span>
-                        </div>
-
-                        <div class="innovation-card bg-slate-50 p-6 rounded-lg">
-                            <div class="flex items-center mb-3">
-                                <div class="bg-pink-100 text-pink-700 p-3 rounded-full mr-3">
-                                    <i class="fas fa-female fa-lg"></i>
-                                </div>
-                                <h4 class="font-bold text-lg text-slate-800">6. Her Cover</h4>
-                            </div>
-                            <p class="text-sm text-slate-600 mb-2">A system to reduce catastrophic health costs for women with chronic conditions via insurance enrollment and subsidised care.</p>
-                            <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="py-20 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl px-6">
-            <h2 class="text-3xl font-bold text-center section-title">My Approach</h2>
-            <div class="max-w-5xl mx-auto mt-12">
+        
+        <!-- VALUES SECTION -->
+        <section id="values" class="py-20 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl px-6">
+            <h2 class="text-3xl font-bold text-center section-title relative">Values I Bring to Teams</h2>
+            <div class="max-w-6xl mx-auto mt-12">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="approach-card text-center">
-                        <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-user-friends text-blue-600 text-xl"></i>
+                    <div class="value-card text-center p-8">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-rocket text-blue-600 text-2xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-3">Human-First Problem Solving</h3>
-                        <p class="text-slate-600 text-sm">Designing human-centered solutions that are technically sound, practical, and needed.</p>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Ownership & Autonomy</h3>
+                        <p class="text-slate-600 text-base">I thrive when empowered to take initiative, own outcomes, and drive projects forward with a founder's mindset.</p>
                     </div>
-                    <div class="approach-card text-center">
-                        <div class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-hands-helping text-green-600 text-xl"></i>
+                    <div class="value-card text-center p-8">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-purple-600 text-2xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-3">Empowerment Over Authority</h3>
-                        <p class="text-slate-600 text-sm">Empowering teams with clear direction and autonomy to foster ownership and growth.</p>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Collaborative Growth</h3>
+                        <p class="text-slate-600 text-base">My goal is to work in a high-performance, collaborative team where I contribute meaningfully and support others to win, so the team wins together.</p>
                     </div>
-                    <div class="approach-card text-center">
-                        <div class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-seedling text-purple-600 text-xl"></i>
+                    <div class="value-card text-center p-8">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
                         </div>
-                        <h3 class="font-bold text-lg text-slate-800 mb-3">Building for Lasting Value</h3>
-                        <p class="text-slate-600 text-sm">Building sustainable systems that create long-term value for organisations and communities.</p>
+                        <h3 class="font-bold text-xl text-slate-800 mb-3">Rapid Learning & Experimentation</h3>
+                        <p class="text-slate-600 text-base">I believe in moving fast, testing ideas, and creating a feedback-heavy environment where learning is celebrated as much as winning.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="py-20">
-            <h2 class="text-3xl font-bold text-center section-title">Skills & Expertise</h2>
-            <div class="max-w-5xl mx-auto">
-                <h3 class="text-xl font-semibold text-slate-700 mb-6 text-center">Core Competencies</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-cogs text-blue-500 mr-3"></i>
-                        Operations Management
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-tasks text-green-500 mr-3"></i>
-                        Programme Management
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-chart-line text-purple-500 mr-3"></i>
-                        Process Improvement
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-truck text-red-500 mr-3"></i>
-                        Supply Chain Logistics
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-users text-yellow-500 mr-3"></i>
-                        Team Leadership
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-handshake text-teal-500 mr-3"></i>
-                        Stakeholder Management
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-chess text-indigo-500 mr-3"></i>
-                        Strategic Planning
-                    </div>
-                    <div class="skill-badge bg-white p-4 rounded-lg shadow-md text-center flex items-center justify-center">
-                        <i class="fas fa-chart-bar text-pink-500 mr-3"></i>
-                        Data Analysis
-                    </div>
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="py-20">
+            <h2 class="text-3xl font-bold text-center section-title relative">Portfolio: Key Projects</h2>
+            <div class="space-y-12 mt-12 max-w-4xl mx-auto">
+
+                <!-- Case Study 1: AI Market Risk -->
+                <div class="case-study-card p-8" style="border-left-color: #3b82f6;">
+                    <h3 class="font-bold text-2xl mb-2 text-slate-800">Case Study: AI-Powered Market Risk Analysis System</h3>
+                    <p class="text-slate-600 mb-4">An autonomous, serverless workflow I designed and built to automate market risk analysis, using Google's Gemini AI to produce structured risk assessments and distribute intelligence to live dashboards.</p>
+                    <button data-modal-target="modal-ai-risk" class="font-semibold text-accent hover:underline">View Full Case Study &rarr;</button>
                 </div>
+
+                <!-- Case Study 2: SmartBank -->
+                <div class="case-study-card p-8" style="border-left-color: var(--secondary);">
+                    <h3 class="font-bold text-2xl mb-2 text-slate-800">New Product Launch: "SmartBank" - Sierra Leone</h3>
+                    <p class="text-slate-600 mb-4">Led the end-to-end program management for a new technology service in an international market, orchestrating funders, partners, and government ministries to deliver a sustainable service that now supports over 5,000 women annually.</p>
+                    <button data-modal-target="modal-smartbank" class="font-semibold text-accent hover:underline">View Full Case Study &rarr;</button>
+                </div>
+
+                <!-- Case Study 3: OneBox -->
+                <div class="case-study-card p-8" style="border-left-color: var(--primary);">
+                    <h3 class="font-bold text-2xl mb-2 text-slate-800">GTM Initiative: "OneBox" with the Gates Foundation</h3>
+                    <p class="text-slate-600 mb-4">Directed a high-stakes GTM initiative for a maternal health logistics product, architecting the core operational system that enabled the program to scale to over 470 health facilities and complete more than 25,000 essential medicine deliveries.</p>
+                    <button data-modal-target="modal-onebox" class="font-semibold text-accent hover:underline">View Full Case Study &rarr;</button>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- INNOVATION LAB SECTION -->
+        <section id="innovation-lab" class="py-20">
+            <h2 class="text-3xl font-bold text-center section-title relative">Innovation Lab: Product Concepts</h2>
+            <div class="case-study-card bg-white rounded-xl shadow-lg overflow-hidden p-8 md:p-12 mt-12 max-w-6xl mx-auto" style="border-left-color: #8b5cf6;">
+                <p class="text-slate-600 mb-8 text-lg max-w-3xl mx-auto text-center">As Director of Innovation, my core responsibility was to lead the development of the next generation of health technology solutions. Below are high-level concepts for some of the confidential products I have led from ideation and business case development through to prototyping and GTM strategy.</p>
                 
-                <h3 class="text-xl font-semibold text-slate-700 mt-16 mb-6 text-center">Technical Proficiencies</h3>
-                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">I am proficient with modern tools for project management and data analysis, actively using technology to drive operational excellence and inform strategy.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="tech-skill text-center">
-                        <h4 class="font-bold text-lg text-slate-800 mb-2">Project Management Tools</h4>
-                        <p class="text-slate-600 text-sm">Basecamp, Asana</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-red-100 text-red-700 p-3 rounded-full mr-3"><i class="fas fa-tint fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">SmartBank</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">A modular blood safety solution combining physical infrastructure, digital records, and a BOTM model for traceability and screening.</p>
+                        <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">Operational</span>
                     </div>
-                    <div class="tech-skill text-center">
-                        <h4 class="font-bold text-lg text-slate-800 mb-2">Go-to-Market Strategy</h4>
-                        <p class="text-slate-600 text-sm">Business Case, Pilot, Launch</p>
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 text-blue-700 p-3 rounded-full mr-3"><i class="fas fa-cogs fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">QUIP</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">A cloud platform for medical equipment lifecycle management, connecting facilities with certified engineers and verified vendors.</p>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-100 px-2 py-1 rounded-full">Pilot</span>
                     </div>
-                    <div class="tech-skill text-center">
-                        <h4 class="font-bold text-lg text-slate-800 mb-2">CRM & Data Platforms</h4>
-                        <p class="text-slate-600 text-sm">Salesforce</p>
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-purple-100 text-purple-700 p-3 rounded-full mr-3"><i class="fas fa-shield-alt fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">Guardian</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">A decentralised CPD platform for healthcare professionals, offering training, digital credentials, and skill-based job matching.</p>
+                        <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
                     </div>
-                    <div class="tech-skill text-center">
-                        <h4 class="font-bold text-lg text-slate-800 mb-2">Data Analysis</h4>
-                        <p class="text-slate-600 text-sm">SQL and Spreadsheet modeling</p>
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-teal-100 text-teal-700 p-3 rounded-full mr-3"><i class="fas fa-network-wired fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">OneSystem</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">An integrated supply chain platform connecting logistics, distribution, and funding across public health systems.</p>
+                        <span class="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">Deployed</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-yellow-100 text-yellow-700 p-3 rounded-full mr-3"><i class="fas fa-ambulance fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">First Response</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">A digital coordination tool connecting emergency responders and ambulances to reduce dispatch delays and optimise routes.</p>
+                        <span class="text-xs font-semibold text-yellow-600 bg-yellow-100 px-2 py-1 rounded-full">In Testing</span>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-pink-100 text-pink-700 p-3 rounded-full mr-3"><i class="fas fa-female fa-lg"></i></div>
+                            <h4 class="font-bold text-lg text-slate-800">Her Cover</h4>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-3">A system to reduce catastrophic health costs for women with chronic conditions via insurance enrollment and subsidised care.</p>
+                        <span class="text-xs font-semibold text-gray-600 bg-gray-200 px-2 py-1 rounded-full">Concept</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pursuits" class="py-20">
-            <h2 class="text-3xl font-bold text-center section-title">Personal Pursuits</h2>
-            <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Beyond my professional work, I am passionate about personal growth and community building. These pursuits reflect my commitment to continuous learning and empowering others.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="pursuit-card text-center">
-                    <div class="flex items-center justify-center mb-3">
-                        <div class="bg-red-100 p-2 rounded-full mr-3">
-                            <i class="fas fa-running text-red-600"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800">Marathon Runner</h3>
+        <!-- SKILLS & EXPERTISE SECTION -->
+        <section id="skills" class="py-20 bg-slate-100 rounded-2xl">
+            <h2 class="text-3xl font-bold text-center section-title relative">Skills & Expertise</h2>
+            <div class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Strategic Leadership -->
+                <div class="skill-category-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-chess-king text-blue-600 text-xl"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Strategic Leadership</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Avid ultra runner. These long distance experiences have taught me discipline, resilience, and the power of perseverance in achieving long-term goals.</p>
+                    <ul class="text-slate-600 space-y-2 list-disc list-inside">
+                        <li>GTM Execution</li>
+                        <li>Product Launch Management</li>
+                        <li>First-Principles Thinking</li>
+                    </ul>
                 </div>
-                
-                <div class="pursuit-card text-center">
-                    <div class="flex items-center justify-center mb-3">
-                        <div class="bg-blue-100 p-2 rounded-full mr-3">
-                            <i class="fas fa-chalkboard-teacher text-blue-600"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800">Leadership Training</h3>
+                <!-- Operational Excellence -->
+                <div class="skill-category-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-cogs text-green-600 text-xl"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Operational Excellence</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Developed "Leading Without a Title," a leadership training module that empowers entry-level professionals to take initiative and build influence for their career growth.</p>
+                    <ul class="text-slate-600 space-y-2 list-disc list-inside">
+                        <li>Scalable Systems Design</li>
+                        <li>Process Optimization & Automation</li>
+                        <li>Data & Insights</li>
+                    </ul>
                 </div>
-                
-                <div class="pursuit-card text-center">
-                    <div class="flex items-center justify-center mb-3">
-                        <div class="bg-green-100 p-2 rounded-full mr-3">
-                            <i class="fas fa-handshake text-green-600"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-slate-800">B2B Sales Techniques</h3>
+                <!-- Cross-Functional Management -->
+                <div class="skill-category-card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-project-diagram text-purple-600 text-xl"></i></div>
+                        <h3 class="text-xl font-bold text-slate-800">Cross-Functional Management</h3>
                     </div>
-                    <p class="text-slate-600 text-sm">Developed "Pull, Don't Push: Inbound Sales Techniques for Stronger Customer Engagement," training modules focusing on relationship-based sales approaches.</p>
+                    <ul class="text-slate-600 space-y-2 list-disc list-inside">
+                        <li>Hybrid Project Management</li>
+                        <li>Stakeholder & Partner Relations</li>
+                        <li>Team Leadership & Coaching</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- TECHNICAL PROFICIENCIES SECTION -->
+        <section id="tech-skills" class="py-20">
+            <h2 class="text-3xl font-bold text-center section-title relative">Technical Proficiencies</h2>
+            <div class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Systems Design -->
+                <div class="tech-category-card p-6 text-center">
+                    <div class="w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-sitemap text-slate-600 text-xl"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Systems Design</h3>
+                    <p class="text-slate-600 text-sm">Process Mapping, SOPs & OKRs, Operational Frameworks</p>
+                </div>
+                <!-- Automation & Workflow -->
+                <div class="tech-category-card p-6 text-center">
+                    <div class="w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-robot text-slate-600 text-xl"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Automation & Workflow</h3>
+                    <p class="text-slate-600 text-sm">Google Apps Script (JS), REST APIs & JSON, Zapier & Airtable</p>
+                </div>
+                <!-- Data & Insights -->
+                <div class="tech-category-card p-6 text-center">
+                    <div class="w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-chart-pie text-slate-600 text-xl"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">Data & Insights</h3>
+                    <p class="text-slate-600 text-sm">SQL, Advanced Spreadsheet Modeling, BI Tools</p>
+                </div>
+                <!-- AI & LLMs -->
+                <div class="tech-category-card p-6 text-center">
+                    <div class="w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-brain text-slate-600 text-xl"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">AI & LLMs</h3>
+                    <p class="text-slate-600 text-sm">Google Gemini API, Prompt Engineering, AI Workflow Design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL PURSUITS SECTION -->
+        <section id="pursuits" class="py-20 bg-slate-100 rounded-2xl">
+             <h2 class="text-3xl font-bold text-center section-title relative">Personal Pursuits</h2>
+             <p class="text-center text-slate-600 max-w-3xl mx-auto mb-12">Beyond my professional work, I am passionate about personal growth and community building. These pursuits reflect my commitment to continuous learning and empowering others.</p>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                 <div class="pursuit-card text-center p-8">
+                     <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-running text-red-600 text-2xl"></i></div>
+                     <h3 class="font-bold text-xl text-slate-800 mb-3">Marathon Runner</h3>
+                     <p class="text-slate-600 text-base">Avid ultra runner. These long distance experiences have taught me discipline, resilience, and the power of perseverance in achieving long-term goals.</p>
+                 </div>
+                 <div class="pursuit-card text-center p-8">
+                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-chalkboard-teacher text-blue-600 text-2xl"></i></div>
+                     <h3 class="font-bold text-xl text-slate-800 mb-3">Leadership Training</h3>
+                     <p class="text-slate-600 text-base">Developed "Leading Without a Title," a leadership training module that empowers entry-level professionals to take initiative and build influence.</p>
+                 </div>
+                 <div class="pursuit-card text-center p-8">
+                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"><i class="fas fa-handshake text-green-600 text-2xl"></i></div>
+                     <h3 class="font-bold text-xl text-slate-800 mb-3">B2B Sales Techniques</h3>
+                     <p class="text-slate-600 text-base">Developed "Pull, Don't Push," training modules focusing on relationship-based sales approaches for stronger customer engagement.</p>
+                 </div>
+             </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
         <section id="contact" class="py-20 text-center">
             <h2 class="text-3xl font-bold text-slate-800">Let's Connect</h2>
             <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">I am passionate about applying my systems-building expertise to new challenges and industries. If you are working on complex operational problems, I would be glad to connect.</p>
             <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:usiaphreteheri@gmail.com" class="contact-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
+                <a href="mailto:usiaphreteheri@gmail.com" style="background: linear-gradient(135deg, var(--primary), var(--secondary));" class="text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center contact-btn">
                     <i class="fas fa-envelope mr-2"></i> Email Me
                 </a>
                 <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="linkedin-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
                     <i class="fab fa-linkedin-in mr-2"></i> LinkedIn
                 </a>
-                <a href="https://wa.me/2348081074629" target="_blank" class="whatsapp-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
+                <a href="https://wa.me/2349160385299" target="_blank" class="whatsapp-btn text-white font-semibold py-3 px-8 rounded-lg shadow-lg inline-flex items-center justify-center">
                     <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                 </a>
             </div>
@@ -628,83 +363,217 @@
         <div class="container mx-auto px-6">
             <p class="mb-4">© 2025 Akpoteheri Tony Usiaphre. All Rights Reserved.</p>
             <div class="flex justify-center space-x-6">
-                <a href="mailto:usiaphreteheri@gmail.com" class="text-slate-400 hover:text-white transition">
-                    <i class="fas fa-envelope fa-lg"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="text-slate-400 hover:text-white transition">
-                    <i class="fab fa-linkedin-in fa-lg"></i>
-                </a>
-                <a href="https://wa.me/2348081074629" target="_blank" class="text-slate-400 hover:text-white transition">
-                    <i class="fab fa-whatsapp fa-lg"></i>
-                </a>
+                <a href="mailto:usiaphreteheri@gmail.com" class="text-slate-400 hover:text-white transition"><i class="fas fa-envelope fa-lg"></i></a>
+                <a href="https://www.linkedin.com/in/teeheri" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin-in fa-lg"></i></a>
             </div>
         </div>
     </footer>
 
-    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
-        <div class="w-full max-w-4xl p-4">
-            <div class="relative">
-                <button id="close-modal" class="absolute -top-10 right-0 text-white text-2xl">×</button>
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe id="video-iframe" class="w-full h-full rounded-lg" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- MODALS CONTAINER -->
+    <!-- AI Risk Modal -->
+    <div id="modal-ai-risk" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-overlay p-4">
+        <div class="bg-white rounded-lg shadow-2xl m-4 max-w-4xl w-full max-h-[90vh] overflow-y-auto modal-content">
+            <div class="p-6 sm:p-8 sticky top-0 bg-white border-b border-gray-200 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-slate-900">Case Study: AI-Powered Market Risk Analysis</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <div class="p-6 sm:p-8">
+                <section class="mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Overview</h3>
+                    <p class="text-slate-700 leading-relaxed">An autonomous, serverless workflow I designed and built from scratch to automate market risk analysis. The system fetches daily news headlines, uses Google's Gemini AI to produce a structured risk assessment, and distributes the intelligence to a live Airtable dashboard and a proactive Asana task management system.</p>
+                </section>
+                <hr class="my-6">
+                <section class="mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">The Challenge</h3>
+                    <p class="text-slate-700 leading-relaxed">Traditional market analysis for a new region is manual, time-consuming, and fails to capture real-time shifts in the business environment.</p>
+                </section>
+                <hr class="my-6">
+                <section class="mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">My Role & System Architecture</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">As the sole architect, I designed and coded the end-to-end intelligence pipeline using Google Apps Script. The workflow:</p>
+                    <ol class="list-decimal list-inside space-y-2 text-slate-700">
+                        <li><strong>Triggers daily</strong> to fetch news from pre-configured RSS feeds.</li>
+                        <li><strong>Sends headlines to the Gemini AI API</strong> within a carefully engineered prompt to return a risk analysis in a strict JSON format.</li>
+                        <li><strong>Distributes the structured data</strong> via API to an Airtable dashboard and an Asana project for proactive alerts.</li>
+                    </ol>
+                </section>
+                <hr class="my-6">
+                <section class="mb-8">
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Final System View</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">The live Airtable database below is the central hub for viewing the daily, AI-generated risk analysis.</p>
+                    <div class="bg-slate-100 p-2 rounded-lg shadow-inner border w-full h-96">
+                         <iframe class="airtable-embed w-full h-full" src="https://airtable.com/embed/appSxSqgTD1DDDyg8/shrpuzvTxwykf24hP" frameborder="0" onmousewheel="" ></iframe>
+                    </div>
+                </section>
+                <hr class="my-6">
+                 <section>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-3">Key Challenges & Resolutions</h3>
+                    <p class="text-slate-700 leading-relaxed mb-4">This project involved significant real-world debugging:</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li><strong>API Errors (404s & 403s):</strong> Resolved API model rejection and access-denied errors by iteratively testing model versions and re-configuring API token permission scopes.</li>
+                        <li><strong>Data Parsing Failures:</strong> Implemented robust extraction logic using regex to guarantee a clean JSON string for parsing, overcoming AI response formatting inconsistencies.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- SmartBank Modal -->
+    <div id="modal-smartbank" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-overlay p-4">
+        <div class="bg-white rounded-lg shadow-2xl m-4 max-w-5xl w-full max-h-[90vh] overflow-y-auto modal-content">
+            <div class="p-6 sm:p-8 sticky top-0 bg-white border-b border-gray-200 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-slate-900">New Product Launch: "SmartBank" - Sierra Leone</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <div class="p-6 sm:p-8">
+                <p class="text-md text-slate-500 mb-8">Partners: Partners In Health (PIH), MSD for Mothers</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <section class="mb-8">
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">The Challenge</h3>
+                            <p class="text-slate-700 leading-relaxed">To improve maternal health outcomes in Sierra Leone by providing reliable, local access to safe blood in a region with limited advanced health infrastructure.</p>
+                        </section>
+                        <section>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">My Role & Approach</h3>
+                            <p class="text-slate-700 leading-relaxed mb-4">I led this project from the ground up, turning an idea into a fully operational facility. My role covered three core areas:</p>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><strong>System Design:</strong> I designed the entire operational plan, from clinical workflows and international procurement to the compliance framework.</li>
+                                <li><strong>Partner Management:</strong> I managed the key partnerships between international funders, local implementers, and the Ministry of Health.</li>
+                                <li><strong>Team Building:</strong> I built and trained the local project team to run the center independently for long-term success.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section class="mb-8">
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Scale & Impact</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-red-600">5k+</p><p class="text-sm text-slate-500">Women Served Annually</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-red-600">57%</p><p class="text-sm text-slate-500">Improvement in Blood Safety</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-red-600">25</p><p class="text-sm text-slate-500">Health Workers Trained</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-red-600">1st</p><p class="text-sm text-slate-500">Screening Centre of its Kind</p></div>
+                            </div>
+                        </section>
+                        <section>
+                             <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Video</h3>
+                             <div class="video-container shadow-lg">
+                                <iframe class="rounded-lg" src="https://www.youtube.com/embed/sV47ZXP9lZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                             </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OneBox Modal -->
+    <div id="modal-onebox" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden modal-overlay p-4">
+        <div class="bg-white rounded-lg shadow-2xl m-4 max-w-5xl w-full max-h-[90vh] overflow-y-auto modal-content">
+            <div class="p-6 sm:p-8 sticky top-0 bg-white border-b border-gray-200 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-slate-900">GTM Initiative: "OneBox" with the Gates Foundation</h2>
+                <button class="close-modal text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+             <div class="p-6 sm:p-8">
+                <p class="text-md text-slate-500 mb-8">Partners: Bill & Melinda Gates Foundation, BOAT Foundation</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <section class="mb-8">
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">The Challenge</h3>
+                            <p class="text-slate-700 leading-relaxed">To solve the critical issue of life-threatening medicine stockouts at remote Primary Healthcare Centres across Northern Nigeria, which directly impacted community health and trust in the healthcare system.</p>
+                        </section>
+                        <section>
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">My Role & Approach</h3>
+                            <p class="text-slate-700 leading-relaxed mb-4">As the project lead, I architected the core Go-to-Market strategy and operational framework. My responsibilities included:</p>
+                            <ul class="list-disc list-inside space-y-2 text-slate-700">
+                                <li><strong>GTM & Logistics Design:</strong> Building a hybrid, tech-enabled logistics model from scratch to ensure reliable last-mile delivery.</li>
+                                <li><strong>Program Rollout:</strong> Managing the end-to-end implementation across three states, overseeing risks, compliance, and field team coordination.</li>
+                                <li><strong>Capacity Building:</strong> Developing and delivering the training curriculum that enabled digital adoption for over 500 healthcare workers.</li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div>
+                        <section class="mb-8">
+                            <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Scale & Impact</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-green-600">470+</p><p class="text-sm text-slate-500">Primary Care Centres</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-green-600">25k+</p><p class="text-sm text-slate-500">Medicines Delivered</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-green-600">510+</p><p class="text-sm text-slate-500">Healthcare Workers Trained</p></div>
+                                <div class="bg-slate-50 p-4 rounded-lg text-center border"><p class="text-3xl font-bold text-green-600">85%</p><p class="text-sm text-slate-500">Increase in Supply Chain Visibility</p></div>
+                            </div>
+                        </section>
+                        <section>
+                             <h3 class="text-xl font-semibold text-slate-800 mb-3">Project Video</h3>
+                             <div class="video-container shadow-lg">
+                                <iframe class="rounded-lg" src="https://www.youtube.com/embed/1nI_ir6ubAQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                             </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Logic ---
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
                     });
-                    
-                    // Close mobile menu if open
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
-        
-        // Video modal functionality
-        const videoModal = document.getElementById('video-modal');
-        const videoIframe = document.getElementById('video-iframe');
-        const closeModal = document.getElementById('close-modal');
-        const playButtons = document.querySelectorAll('.play-button');
-        
-        playButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const videoUrl = this.getAttribute('data-video');
-                const videoId = videoUrl.split('/').pop();
-                videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-                videoModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        closeModal.addEventListener('click', function() {
-            videoModal.classList.add('hidden');
-            videoIframe.src = '';
-            document.body.style.overflow = 'auto';
-        });
-        
-        videoModal.addEventListener('click', function(e) {
-            if (e.target === videoModal) {
-                videoModal.classList.add('hidden');
-                videoIframe.src = '';
-                document.body.style.overflow = 'auto';
+                });
             }
+
+            // --- Modal Logic ---
+            const modalTriggers = document.querySelectorAll('[data-modal-target]');
+            
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const targetId = trigger.getAttribute('data-modal-target');
+                    const modal = document.getElementById(targetId);
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            const closeButtons = document.querySelectorAll('.close-modal');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.modal-overlay');
+                    if (modal) {
+                        modal.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                        // Stop any playing videos
+                        const iframe = modal.querySelector('iframe');
+                        if (iframe) {
+                            const tempSrc = iframe.src;
+                            iframe.src = tempSrc; 
+                        }
+                    }
+                });
+            });
+
+            const modalOverlays = document.querySelectorAll('.modal-overlay');
+            modalOverlays.forEach(overlay => {
+                overlay.addEventListener('click', (event) => {
+                    if (event.target === overlay) {
+                        overlay.classList.add('hidden');
+                        document.body.style.overflow = 'auto';
+                         // Stop any playing videos
+                        const iframe = overlay.querySelector('iframe');
+                        if (iframe) {
+                            const tempSrc = iframe.src;
+                            iframe.src = tempSrc;
+                        }
+                    }
+                });
+            });
         });
     </script>
 </body>
